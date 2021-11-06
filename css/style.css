@@ -1,0 +1,214 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+ul,li{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+
+:root{
+    --black:#333;
+    --white:#fff;
+}
+.dark{
+    --black:#fff;
+    --white:#333;
+}
+
+/* =============nav css goes to here ============== */
+nav{
+    position: fixed;
+    width: 100%;
+    z-index: 111111111;
+}
+.logo{
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color:var(--black);
+}
+.btns_main{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+
+}
+.btns{
+    position: relative;
+    margin: 0 5px;
+    cursor: pointer;
+    text-align: center;
+    padding: 13px;
+}
+.btns.menu_toggle ion-icon {
+    font-size: 3em;
+}
+.btns ion-icon{
+    font-size: 1.5em;
+    color: var(--black);
+}
+.btns ion-icon:nth-child(2){
+   display: none;
+}
+.btns.active ion-icon:nth-child(2){
+   display: block;
+}
+
+.btns.active ion-icon:nth-child(1){
+   display: none;
+}
+
+
+/* <!-- =======================banner part goes to here=============== --> */
+#banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#banner video{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+
+}
+#banner img{
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: 2;
+   user-select: none;
+   mix-blend-mode: screen;
+ 
+
+}
+.dark #banner img{
+    filter: invert(1);
+    -webkit-filter: invert(1);
+    mix-blend-mode: multiply ;
+}
+#banner h2{
+   position: relative;
+   z-index: 3;
+  font-size: 16vw;
+  color: #fff;
+  text-transform: capitalize;
+  /* text-shadow: 0 20px 30px rgba(0,0,0,0.2); */
+  text-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  font-weight: bold;
+
+}
+.copyright{
+    position: absolute;
+    left: 100px;
+    bottom: 10px;
+    z-index: 4;
+    font-weight: 500;
+    font-size: 1.2em;
+    color: var(--black);
+}
+.social_icon{
+    position: absolute;
+    right: 100px;
+    bottom: 10px;
+    z-index: 4;
+}
+.social_icon a{
+   color: var(--black);
+   font-size: 1.75em;
+}
+
+/* <!-- =======================nav  slider bar part goes to here=============== --> */
+.navigation{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    z-index: 4;
+    flex-direction: column;
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+.navigation.active{
+    left: 0;
+}
+
+.navigation li a{
+    display: inline-flex;
+    margin: 5px 0;
+    font-size: 1.35em;
+    color: var(--black);
+    padding: 5px 20px;
+    border-radius: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    -ms-border-radius: 40px;
+    -o-border-radius: 40px;
+    text-transform: capitalize;
+}
+.navigation li a:hover{
+    background-color: var(--black);
+    color: var(--white);
+}
+
+/* <!-- =======================responsive part goes to here=============== --> */
+@media (max-width:768px) {
+    .logo {
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .copyright {
+      
+        left: 10px;
+        bottom: 5px;
+        z-index: 4;
+        font-weight: 400;
+        font-size: 1em;
+       
+    }
+    .btns {
+        padding: 0px;
+    }
+    .social_icon {
+        right: 10px;
+        bottom: 0;
+    }
+    .social_icon a {
+        font-size: 1.4em;
+    }
+    .navigation.active {
+        left: -20px;
+        width: 104%;
+    }
+    
+}
+/* <!-- =======================nav part goes to here=============== --> */
+/* <!-- =======================nav part goes to here=============== --> */
+/* <!-- =======================nav part goes to here=============== --> */
+
+
